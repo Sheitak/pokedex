@@ -38,6 +38,18 @@ export class PokemonsService {
     );
   }
 
+  // Recherche un Pokemon par rapport à l'écriture de l'utilisateur
+  searchPokemons(term: string): Observable<Pokemon[]> {
+    if(!term.trim()) {
+      return of([]);
+    }
+
+    return this.http.get<Pokemon[]>(`${this.pokemonsUrl}/?name=${term}`).pipe(
+      tap(_ => this.log(`found pokemons matching "${term}"`)),
+      catchError(this.handleError<Pokemon[]>('searchPokemons', []))
+    );
+  }
+
   // Supprime un Pokemon "Delete"
   deletePokemon(pokemon: Pokemon): Observable<Pokemon> {
     const url = `${this.pokemonsUrl}/${pokemon.id}`;
