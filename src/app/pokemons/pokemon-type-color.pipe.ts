@@ -38,14 +38,41 @@ export class PokemonTypeColorPipe implements PipeTransform {
 				color = 'pink lighten-4';
 				break;
 			case 'Psy':
-				color = 'deep-purple darken-2';
+				color = 'deep-purple darken-1';
 				break;
 			case 'Electrik':
 				color = 'lime accent-1';
 				break;
 			case 'Combat':
 				color = 'deep-orange';
-				break;
+        break;
+      case 'Acier':
+        color = 'blue-grey darken-1';
+        break;
+      case 'Dragon':
+        color = 'indigo darken-2';
+        break;
+      case 'Glace':
+        color = 'cyan lighten-1';
+        break;
+      case 'Roche':
+        color = 'brown';
+        break;
+      case 'Sol':
+        color = 'amber ligten-4';
+        break;
+      case 'Spectre':
+        color = 'purple darken-2';
+        break;
+      case 'Tenebres':
+        color = 'grey darken-3';
+        break;
+      case 'Obscur':
+        color = 'grey darken-2';
+        break;
+      case '???':
+        color = 'blue-grey lighten-3';
+        break;
 			default:
 				color = 'grey';
 				break;

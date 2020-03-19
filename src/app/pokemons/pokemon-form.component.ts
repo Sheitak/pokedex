@@ -56,8 +56,12 @@ export class PokemonFormComponent implements OnInit {
     // La méthode appelée lorsque le formulaire est soumis.
     onSubmit(): void {
         console.log("Submit form !");
-        let link = ['/pokemon', this.pokemon.id];
-        this.router.navigate(link);
+        this.pokemonsService.updatePokemon(this.pokemon)
+        .subscribe(() => this.goBack());
     }
 
+    goBack(): void {
+      let link = ['/pokemon', this.pokemon.id];
+      this.router.navigate(link);
+    }
 }

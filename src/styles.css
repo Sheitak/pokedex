@@ -1,1 +1,13 @@
 /* You can add global styles to this file, and also import other style files */
+.delete-pokemon {
+  background-color: darkred;
+  transition-duration: 0.8s;
+}
+
+.delete-pokemon:hover {
+  background-color: orangered;
+}
+
+.delete-pokemon, .edit-pokemon {
+  margin-left: 1rem;
+}

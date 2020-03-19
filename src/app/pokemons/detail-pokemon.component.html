@@ -35,8 +35,9 @@
         </table>
       </div>
       <div class="card-action">
-        <a (click)="goBack()">Retour</a>
-        <a (click)="goEdit(pokemon)">Editer</a>
+        <a (click)="goBack()" class="return-list waves-effect waves-light btn">Retour</a>
+        <a (click)="goEdit(pokemon)" class="edit-pokemon waves-effect waves-light btn">Editer</a>
+        <a (click)="delete(pokemon)" class="delete-pokemon waves-effect waves-orange btn">Supprimer</a>
       </div>
     </div>
   </div>
