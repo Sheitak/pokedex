@@ -8,6 +8,10 @@ import { InMemoryDataService } from './in-memory-data.service';
 import { AppRoutingModule } from './app-routing.module';
 import { PokemonsModule } from './pokemons/pokemons.module';
 
+import { FormsModule } from '@angular/forms';
+import { LoginComponent } from './login.component';
+import { LoginRoutingModule } from './login-routing.module';
+
 import { AppComponent } from './app.component';
 import { PageNotFoundComponent } from './page-not-found.component';
 
@@ -15,12 +19,15 @@ import { PageNotFoundComponent } from './page-not-found.component';
     imports: [
       BrowserModule,
       HttpClientModule,
+      FormsModule,
       HttpClientInMemoryWebApiModule.forRoot(InMemoryDataService, {dataEncapsulation: false}),
       PokemonsModule,
+      LoginRoutingModule,
       AppRoutingModule
     ],
     declarations: [
         AppComponent,
+        LoginComponent,
         PageNotFoundComponent
     ],
     bootstrap: [AppComponent]
