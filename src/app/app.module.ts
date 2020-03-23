@@ -30,6 +30,6 @@ import { PageNotFoundComponent } from './page-not-found.component';
         LoginComponent,
         PageNotFoundComponent
     ],
-    bootstrap: [AppComponent]
+    bootstrap: [AppComponent],
 })
 export class AppModule { }

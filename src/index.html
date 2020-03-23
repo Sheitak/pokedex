@@ -1,15 +1,22 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-<head>
-  <base href="/">
-  <meta charset="utf-8">
-  <title>Pokedex</title>
-  <base href="/">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" type="image/x-icon" href="favicon.ico">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-</head>
-<body>
-  <pokemon-app></pokemon-app>
-</body>
+  <head>
+    <title>Pokedex</title>
+    <base href="/">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
+    <!-- Polyfill(s) for older browsers -->
+    <script type ="application" src="https://unpkg.com/core-js@3.6.4/client/shim.min.js"></script>
+    <script type ="application" src="https://unpkg.com/zone.js@0.10.3?main=browser"></script>
+    <script type ="text" src="https://unpkg.com/systemjs@6.2.6/dist/system.src.js"></script>
+    <script src="systemjs.config.server.js"></script>
+    <script>
+      // System.import('dist/main.js').catch(function(err){ console.error(err); });
+    </script>
+  </head>
+
+  <body>
+    <pokemon-app></pokemon-app>
+  </body>
 </html>

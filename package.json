@@ -7,7 +7,8 @@
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "dev": "lite-server"
   },
   "private": true,
   "dependencies": {
@@ -19,14 +20,16 @@
     "@angular/platform-browser": "~9.0.5",
     "@angular/platform-browser-dynamic": "~9.0.5",
     "@angular/router": "~9.0.5",
+    "core-js": "^3.6.4",
     "rxjs": "~6.5.4",
+    "systemjs": "^6.2.6",
     "tslib": "^1.10.0",
-    "zone.js": "~0.10.2"
+    "zone.js": "^0.10.3"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "~0.900.5",
     "@angular/cli": "~9.0.5",
-    "@angular/compiler-cli": "~9.0.5",
+    "@angular/compiler-cli": "^9.0.7",
     "@angular/language-service": "~9.0.5",
     "@types/jasmine": "~3.5.0",
     "@types/jasminewd2": "~2.0.3",
@@ -40,6 +43,7 @@
     "karma-coverage-istanbul-reporter": "~2.1.0",
     "karma-jasmine": "~2.0.1",
     "karma-jasmine-html-reporter": "^1.4.2",
+    "lite-server": "^2.5.4",
     "protractor": "~5.4.3",
     "ts-node": "~8.3.0",
     "tslint": "~5.18.0",

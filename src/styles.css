@@ -11,3 +11,7 @@
 .delete-pokemon, .edit-pokemon {
   margin-left: 1rem;
 }
+
+.login-labels {
+  padding-left: 1rem;
+}

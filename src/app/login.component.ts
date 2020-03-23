@@ -14,11 +14,11 @@ import { AuthService } from './auth.service';
       </div>
             <form #loginForm="ngForm">
           <div>
-                    <label for="name">Name</label>
+                    <label class="login-labels" for="name">Name</label>
             <input type="text" id="name" [(ngModel)]="name" name="name" required>
           </div>
           <div>
-            <label for="password">Password</label>
+            <label class="login-labels" for="password">Password</label>
             <input type="password" id="password" [(ngModel)]="password" name="password" required>
           </div>
         </form>
