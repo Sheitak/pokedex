@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { Title } from '@angular/platform-browser';
+
 import { Pokemon } from './pokemons/pokemon';
 import { POKEMONS } from './pokemons/mock-pokemons';
 
@@ -6,4 +8,11 @@ import { POKEMONS } from './pokemons/mock-pokemons';
     selector: 'pokemon-app',
     templateUrl: './app.component.html'
 })
-export class AppComponent { }
+export class AppComponent implements OnInit {
+
+  public constructor(private titleService: Title) { }
+
+  ngOnInit() {
+  this.titleService.setTitle("Pokedex");
+  }
+}
