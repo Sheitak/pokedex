@@ -1,6 +1,6 @@
-import { NgModule }       from '@angular/core';
-import { RouterModule }   from '@angular/router';
-import { AuthService }    from './auth.service';
+import { NgModule } from '@angular/core';
+import { RouterModule } from '@angular/router';
+import { AuthService } from './auth.service';
 import { LoginComponent } from './login.component';
 
 @NgModule({

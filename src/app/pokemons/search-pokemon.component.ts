@@ -8,7 +8,7 @@ import { PokemonsService } from './pokemons.service';
 import { Pokemon } from './pokemon';
 
 @Component({
-    selector: 'pokemon-search',
+    selector: 'app-pokemon-search',
     templateUrl: './search-pokemon.component.html'
 })
 export class PokemonSearchComponent implements OnInit {
@@ -37,7 +37,7 @@ export class PokemonSearchComponent implements OnInit {
     }
 
     gotoDetail(pokemon: Pokemon): void {
-        let link = ['/pokemon', pokemon.id];
+        const link = ['/pokemon', pokemon.id];
         this.router.navigate(link);
     }
 }

@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'pokemon-loader',
+  selector: 'app-pokemon-loader',
   template: `
     <div class="preloader-wrapper big active">
       <div class="spinner-layer spinner-blue">

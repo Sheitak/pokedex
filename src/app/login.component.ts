@@ -3,7 +3,7 @@ import { Router } from '@angular/router';
 import { AuthService } from './auth.service';
 
 @Component({
-    selector: 'login',
+    selector: 'app-login',
     template: `
     <div class='row'>
     <div class="col s12 m4 offset-m4">
@@ -32,7 +32,7 @@ import { AuthService } from './auth.service';
   `
 })
 export class LoginComponent {
-    message: string = 'Vous êtes déconnecté. (pikachu/pikachu)';
+    message = 'Vous êtes déconnecté. (pikachu/pikachu)';
     public name: string;
     public password: string;
 
@@ -52,7 +52,7 @@ export class LoginComponent {
             if (this.authService.isLoggedIn) {
                 // Récupère l'URL de redirection depuis le service d'authentification
                 // Si aucune redirection n'a été définis, redirige l'utilisateur vers la liste des pokemons.
-                let redirect = this.authService.redirectUrl ? this.authService.redirectUrl : '/pokemon/all';
+                const redirect = this.authService.redirectUrl ? this.authService.redirectUrl : '/pokemon/all';
                 // Redirige l'utilisateur
                 this.router.navigate([redirect]);
             } else {

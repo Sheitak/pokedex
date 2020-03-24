@@ -5,7 +5,7 @@ import { Pokemon } from './pokemons/pokemon';
 import { POKEMONS } from './pokemons/mock-pokemons';
 
 @Component({
-    selector: 'pokemon-app',
+    selector: 'app-pokemon',
     templateUrl: './app.component.html'
 })
 export class AppComponent implements OnInit {
@@ -13,6 +13,6 @@ export class AppComponent implements OnInit {
   public constructor(private titleService: Title) { }
 
   ngOnInit() {
-  this.titleService.setTitle("Pokedex");
+  this.titleService.setTitle('Pokedex');
   }
 }

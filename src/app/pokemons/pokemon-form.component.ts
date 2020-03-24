@@ -4,7 +4,7 @@ import { PokemonsService } from './pokemons.service';
 import { Pokemon } from './pokemon';
 
 @Component({
-    selector: 'pokemon-form',
+    selector: 'app-pokemon-form',
     templateUrl: './pokemon-form.component.html',
     styleUrls: ['./pokemon-form.component.css']
 })
@@ -23,18 +23,18 @@ export class PokemonFormComponent implements OnInit {
 
     // Détermine si le type passé en paramètres appartient ou non au pokémon en cours d'édition.
     hasType(type: string): boolean {
-        let index = this.pokemon.types.indexOf(type);
-        if (index > -1) return true;
+        const index = this.pokemon.types.indexOf(type);
+        if (index > -1) { return true; }
         return false;
     }
 
     // Méthode appelée lorsque l'utilisateur ajoute ou retire un type au pokémon en cours d'édition.
     selectType($event: any, type: string): void {
-        let checked = $event.target.checked;
+        const checked = $event.target.checked;
         if (checked) {
             this.pokemon.types.push(type);
         } else {
-            let index = this.pokemon.types.indexOf(type);
+            const index = this.pokemon.types.indexOf(type);
             if (index > -1) {
                 this.pokemon.types.splice(index, 1);
             }
@@ -55,13 +55,13 @@ export class PokemonFormComponent implements OnInit {
 
     // La méthode appelée lorsque le formulaire est soumis.
     onSubmit(): void {
-        console.log("Submit form !");
+        console.log('Submit form !');
         this.pokemonsService.updatePokemon(this.pokemon)
         .subscribe(() => this.goBack());
     }
 
     goBack(): void {
-      let link = ['/pokemon', this.pokemon.id];
+      const link = ['/pokemon', this.pokemon.id];
       this.router.navigate(link);
     }
 }

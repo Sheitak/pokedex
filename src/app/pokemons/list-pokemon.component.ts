@@ -4,7 +4,7 @@ import { Router } from '@angular/router';
 import { PokemonsService } from './pokemons.service';
 
 @Component({
-    selector: 'list-pokemon',
+    selector: 'app-list-pokemon',
     templateUrl: './list-pokemon.component.html',
 })
 export class ListPokemonComponent implements OnInit {
@@ -20,7 +20,7 @@ export class ListPokemonComponent implements OnInit {
 
     selectPokemon(pokemon: Pokemon): void {
         console.log('Vous avez selectionné ' + pokemon.name);
-        let link = ['/pokemon', pokemon.id];
+        const link = ['/pokemon', pokemon.id];
         this.router.navigate(link);
     }
 

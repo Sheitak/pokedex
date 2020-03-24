@@ -17,7 +17,7 @@ export class PokemonsService {
     console.info(log);
   }
 
-  private handleError<T>(operation='operation', result?: T) {
+  private handleError<T>(operation= 'operation', result?: T) {
     return (error: any): Observable<T> => {
       console.log(error);
       console.log(`${operation} failed: ${error.message}`);
@@ -40,7 +40,7 @@ export class PokemonsService {
 
   // Recherche un Pokemon par rapport à l'écriture de l'utilisateur
   searchPokemons(term: string): Observable<Pokemon[]> {
-    if(!term.trim()) {
+    if (!term.trim()) {
       return of([]);
     }
 
@@ -85,6 +85,6 @@ export class PokemonsService {
     return ['Plante', 'Feu', 'Eau', 'Insecte', 'Normal',
     'Electrik', 'Poison', 'Fée', 'Vol', 'Acier', 'Combat',
     'Dragon', 'Glace', 'Psy', 'Roche', 'Sol', 'Spectre',
-    'Tenebres', 'Obscur', '???']
+    'Tenebres', 'Obscur', '???'];
   }
 }

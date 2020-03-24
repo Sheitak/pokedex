@@ -3,7 +3,8 @@ import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
 import { AppModule } from './app/app.module';
 
 if (!/localhost/.test(document.location.host)) {
-	enableProdMode();
+
+  enableProdMode();
 }
 
 platformBrowserDynamic().bootstrapModule(AppModule)

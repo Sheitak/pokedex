@@ -4,13 +4,13 @@ import { Pokemon } from './pokemon';
 import { PokemonsService } from './pokemons.service';
 
 @Component({
-  selector: 'edit-pokemon',
+  selector: 'app-edit-pokemon',
   template: `
     <h2 class="header center">Editer {{ pokemon?.name }}</h2>
         <p class="center">
             <img *ngIf="pokemon" [src]="pokemon.picture"/>
         </p>
-    <pokemon-form [pokemon]="pokemon"></pokemon-form>
+    <app-pokemon-form [pokemon]="pokemon"></app-pokemon-form>
   `,
 })
 export class EditPokemonComponent implements OnInit {
@@ -22,7 +22,7 @@ export class EditPokemonComponent implements OnInit {
     private pokemonsService: PokemonsService) {}
 
   ngOnInit(): void {
-    let id = +this.route.snapshot.params['id'];
+    const id = +this.route.snapshot.params.id;
     this.pokemonsService.getPokemon(id)
     .subscribe(pokemon => this.pokemon = pokemon);
   }
