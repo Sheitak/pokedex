@@ -10,6 +10,8 @@
     "module": "esnext",
     "moduleResolution": "node",
     "importHelpers": true,
+    "pretty": true,
+    "charset": "UTF-8",
     "target": "es2015",
     "lib": [
       "es2018",
