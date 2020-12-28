@@ -1,3 +1,7 @@
+/*
+ *   Copyright (c) 2020
+ *   All rights reserved.
+ */
 import { Component, OnInit } from '@angular/core';
 
 @Component({
